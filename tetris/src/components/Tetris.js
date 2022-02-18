@@ -2,11 +2,16 @@ import React from "react";
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
+import { createStage } from "../gameHelpers";
+import { StyledTetrisWrapper } from "./styles/StyledTetris";
+import { StyledTetris } from "./styles/StyledTetris";
 
 const Tetris = () => {
     return (
+        <StyledTetrisWrapper>
+            <StyledTetris>
         <div>
-            <Stage />
+            <Stage stage={createStage()}/>
             <aside>
                 <div>
                 <Display text = "Score"/>
@@ -18,6 +23,8 @@ const Tetris = () => {
             </aside>
 
         </div>
+            </StyledTetris>
+        </StyledTetrisWrapper>
     )
 }
 

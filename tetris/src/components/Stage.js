@@ -1,9 +1,9 @@
 import React from "react";
-import cell from "./Cell";
+import Cell from "./Cell";
 
 const Stage = ({stage}) => (
     <div>
-        <cell/>
+        {stage.map(row => row.map((cell, x) => <Cell key={x} type= {cell[0]} />))}
     </div>
 )
 
